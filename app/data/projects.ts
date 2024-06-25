@@ -35,4 +35,20 @@ export const projects: Record<ProjectType["title"], ProjectType> = {
     title: "Raw Mango Other",
     banner: "images/projects/RAWMANGO.png",
   },
+  injiri: {
+    title: "INJIRI",
+    banner: "images/projects/INJIRI.png",
+  },
+  sgvvo: {
+    title: "sgvvo",
+    banner: "images/projects/sgvvo.png",
+  },
+  shroomery: {
+    title: "Shroomery",
+    banner: "images/projects/shroomery.png",
+  },
+  islaridge: {
+    title: "Isla's Ridge",
+    banner: "images/projects/islaridge.png",
+  },
 };

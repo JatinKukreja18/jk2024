@@ -13,6 +13,8 @@ export default function Home() {
   const row1Clone = Object.keys(projects).slice(0, 3);
   const row2 = Object.keys(projects).slice(4, 8);
   const row2Clone = Object.keys(projects).slice(4, 7);
+  const row3 = Object.keys(projects).slice(8, 12);
+  const row3Clone = Object.keys(projects).slice(8, 11);
   // const row1Ref: any = useRef();
   const container = useRef(null);
   const row1ref = useRef(null);
@@ -37,8 +39,8 @@ export default function Home() {
     const row1Height = document.querySelector("#row1")?.clientHeight || 0;
     const row2Height = document.querySelector("#row2")?.clientHeight || 0;
     console.log(row1Height);
-    const row1ToScroll = row1Height - window.innerHeight + 60;
-    const row2ToScroll = row2Height - window.innerHeight + 60;
+    const row1ToScroll = row1Height - window.innerHeight;
+    const row2ToScroll = row2Height - window.innerHeight;
     timeline
       .fromTo(row1ref.current, { transform: `translateY(-2.5rem)` }, { transform: `translateY(-${row1ToScroll}px)`, ease: "none" })
       .fromTo(row2ref.current, { transform: `translateY(-${row2ToScroll}px)` }, { transform: `translateY(-2.5rem)`, ease: "none" }, 0)
@@ -52,42 +54,42 @@ export default function Home() {
     // }
   }, []);
   return (
-    <main className=" min-h-screen h-[300vh] items-center justify-between py-12 overflow-hidden">
+    <main className=" min-h-screen h-[300vh] overflow-hidden">
       <div id="container" className=" px-20 fixed top-0 left-0 w-full h-full" ref={container}>
         <div className="grid grid-cols-3 gap-20 overflow-hidden py-10">
           <SmoothScrolling>
             <div ref={row1ref} id="row1" className="flex flex-col overflow-scroll">
               {row1.map((key) => (
-                <div className="w-full py-10" key={key}>
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
               {row1Clone.map((key) => (
-                <div className="w-full py-10" key={key}>
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
             </div>
             <div ref={row2ref} id="row2" className="flex flex-col overflow-scroll">
               {row2.map((key) => (
-                <div className="w-full py-10" key={key}>
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
               {row2Clone.map((key) => (
-                <div className="w-full py-10" key={key}>
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
             </div>
             <div ref={row3ref} id="row3" className="flex flex-col overflow-scroll">
-              {row1.map((key) => (
-                <div className="w-full py-10" key={key + "3"}>
+              {row3.map((key) => (
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key + "3"}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
-              {row1Clone.map((key) => (
-                <div className="w-full py-10" key={key + "3cs"}>
+              {row3Clone.map((key) => (
+                <div className="w-full py-10 hover:scale-90 duration-500" key={key + "3cs"}>
                   <img className="w-full" src={projects[key].banner} alt="" />
                 </div>
               ))}
