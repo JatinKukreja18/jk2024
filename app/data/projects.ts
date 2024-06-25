@@ -17,7 +17,7 @@ export const projects: Record<ProjectType["title"], ProjectType> = {
   },
   feat: {
     title: "Feat Artists",
-    banner: "images/projects/feat.png",
+    banner: "images/projects/FEAT.png",
   },
   pranoysarkar: {
     title: "Pranoy Sarkar",
@@ -25,7 +25,7 @@ export const projects: Record<ProjectType["title"], ProjectType> = {
   },
   rij: {
     title: "RIJUTA",
-    banner: "images/projects/rij.png",
+    banner: "images/projects/RIJ.png",
   },
   sqdn: {
     title: "Squadron 14",
