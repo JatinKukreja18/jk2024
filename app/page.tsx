@@ -8,6 +8,7 @@ import { useRef, useEffect, useLayoutEffect } from "react";
 import SmoothScrolling from "./components/SmoothScrolling";
 import { time } from "console";
 import Demo from "./components/Demo";
+import ProjectCard from "./components/ProjectCard";
 
 function duplicateNodes(parentId: string, initialCount: number) {
   const parentElement = document.querySelector("#" + parentId);
@@ -100,23 +101,17 @@ export default function Home() {
           <SmoothScrolling>
             <div ref={row1ref} id="row1" className="flex flex-col overflow-scroll">
               {row1.map((key) => (
-                <div className="w-full py-4 lg:py-10 hover:scale-90 duration-500" key={key + 1}>
-                  <img className="w-full" src={projects[key].banner} alt="" />
-                </div>
+                <ProjectCard key={key + 1} project={projects[key]} />
               ))}
             </div>
             <div ref={row2ref} id="row2" className="flex flex-col overflow-scroll">
               {row2.map((key) => (
-                <div className="w-full py-4 lg:py-10 hover:scale-90 duration-500" key={key + 2}>
-                  <img className="w-full" src={projects[key].banner} alt="" />
-                </div>
+                <ProjectCard key={key + 2} project={projects[key]} />
               ))}
             </div>
             <div ref={row3ref} id="row3" className="flex flex-col overflow-scroll">
               {row3.map((key) => (
-                <div className="w-full py-4 lg:py-10 hover:scale-90 duration-500" key={key + "3"}>
-                  <img className="w-full" src={projects[key].banner} alt="" />
-                </div>
+                <ProjectCard key={key + 3} project={projects[key]} />
               ))}
             </div>
           </SmoothScrolling>

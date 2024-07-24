@@ -18,9 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: rgb(var(--background-end-rgb))
 }
 
 @layer utilities {
@@ -55,4 +53,17 @@ html {
 ::-webkit-scrollbar {
   display: none;
   /* Safari and Chrome */
+}
+
+.clip-card {
+  cursor: pointer;
+  clip-path: inset(0 0 0 0 round 8px);
+}
+
+.clip-card:hover img {
+  transform: scale(1.05);
+}
+
+.clip-card:hover {
+  clip-path: inset(4% 4% 4% 4% round 12px);
 }
